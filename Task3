@@ -38,3 +38,19 @@ for i in a:
     if a.count(i) > 2:
         a.remove(i)
 print(a)
+
+
+#Найдите минимальный по модулю элемент списка.
+
+from random import random
+N = 10
+arr = []
+for i in range(N):
+    arr.append(int(random() * 100) - 50)
+print(arr)
+
+num = 0
+for i in range(1, N):
+    if abs(arr[i]) < abs(arr[num]):
+        num = i
+print(num+1)
